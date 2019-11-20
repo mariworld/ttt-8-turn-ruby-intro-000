@@ -31,8 +31,10 @@ def turn(board)
   index = input_to_index(user_input)
   if valid_move?(board, index)
       token = character(board)
+      move(board, index, token)
+      display_board(board)
   else
-      return true
+      turn(board)
   end
 end
 #     puts "Please enter 1-9:"
